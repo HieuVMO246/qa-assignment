@@ -1,24 +1,25 @@
 import request from 'supertest';
+import PathAPI from '../config/PathAPI';
+
 
 const defaultHeaders = {
   "Content-Type": "multipart/form-data"
 };
 
 export class BaseAPI {
-  private baseUrl: string;
+  private baseUrl: any;
 
   constructor() {
-    const baseUrl = process.env['BASE_URL'];
-    expect(baseUrl).toBeDefined();
-    this.baseUrl = baseUrl;
+     this.baseUrl = PathAPI.BASE_URL;
+    expect(this.baseUrl).toBeDefined();
   }
 
-  async postWithImage(endpoint: string, file: string): Promise<request.Response> {
+  async postWithAttach(endpoint: string, file: string): Promise<request.Response> {
     try {
       const response = await request(this.baseUrl)
         .post(endpoint)
-        .set(defaultHeaders) // Set headers
-        .attach('file', file); // Attach file
+        .set(defaultHeaders)
+        .attach('file', file); 
       return response;
     } catch (error) {
       throw error;

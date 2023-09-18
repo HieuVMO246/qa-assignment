@@ -1,14 +1,11 @@
 {
-    "compilerOptions": {
-      "target": "ES2017",
-      "module": "commonjs",
-      "sourceMap": true,
-      "outDir": "build",
-      "moduleResolution": "node",
-      "baseUrl": ".",
-      "esModuleInterop": true,
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true
-    },
-    "include": ["src/**/*"]
-  }
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
