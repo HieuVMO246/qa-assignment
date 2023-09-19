@@ -31,4 +31,8 @@ export default class CommonStep {
         return response.body[propertyName];
     }
 
+    public static getPathDataFile(dataType:string, fileName:string):string{
+        return `data\\${dataType}\\${fileName}`;
+    }
+
 }

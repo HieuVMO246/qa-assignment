@@ -1,1 +1,3 @@
-jest.setTimeout(10000);
+import GlobalVariable from "./GlobalVariable";
+
+jest.setTimeout(GlobalVariable.TEST_TIMEOUT);

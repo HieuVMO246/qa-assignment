@@ -1,6 +1,6 @@
 import request from 'supertest';
 import PathAPI from '../config/PathAPI';
-import * as fs from 'fs';
+import GlobalVariable from '../config/GlobalVariable';
 
 
 const defaultHeaders = {
@@ -21,7 +21,7 @@ export class BaseAPI {
         .post(endpoint)
         .set(defaultHeaders)
         .attach('file', file)
-        .timeout(10000);
+        .timeout(GlobalVariable.API_TIMEOUT);
       console.log('Response:', response);
       return response;
     } catch (error) {

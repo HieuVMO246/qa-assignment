@@ -1,38 +1,74 @@
-# Technical QA Assessment
-A take-home automation testing assignment for QA interview.
+# QA-ASSIGNMENT
 
-## Your Task
-1.	Develop API automation test to validate the following user stories using Typescript.
-2.	Write some high-level test scenarios for each user story.
-3.	Register the bug(s) found during testing.
+### Prerequisites
+Before you begin, ensure you have met the following requirements:
 
-### User Stories
-* User Story 1 - 
-In order to store and use my pictures through the https://assessement.onrender.com/api/image API service:
-As an Anonymous user,
-I want to attach a picture to the Service
-and I want to have a permanent link to this picture,
-Otherwise, I want to be rejected and informed if the file is not a picture.
+- **Node.js**: Your system should have Node.js installed. You can download it from [nodejs.org](https://nodejs.org/).
 
-* User Story 2 - 
-In order to save my time from uploading my pictures multiple times via https://assessement.onrender.com/api/zip API service:
-As an Anonymous user,
-I want to attach a zip file containing multiple images
-and I want each of these uploaded images to have a permanent link.
+  ```sh
+  # To check if Node.js is installed, run this command:
+   node -v
 
-## Getting Started
-Please review the information in this section before you get started with your development. 
+  # Example output: v16.3.0
+  ```
 
-* Create a personal fork of the project on Github.
-* Clone the fork on your local machine.
-* Implement your solution and push the test automation codes and test documents to forked repository.
-* When you are ready, submit the forked repo for review by providing the link to the repo to our recruitment team.
+- **TypeScript**: This project is written in TypeScript, so you need to have TypeScript installed globally.
 
-### Tools
-You are free to choose the IDE (Integrated Development Environment) tool you are most comfortable with.
+    ```sh
+    # Install TypeScript globally using npm
+      npm install -g typescript
+   
+   # Check TypeScript version
+      tsc -v
+   
+   # Example output: Version 4.5.2
+    ``` 
+- **Visual Studio Code**: We recommend using Visual Studio Code as the development environment for this project. You can download it from code.visualstudio.com.
+  Once installed, make sure to install the following extensions for a smoother TypeScript development experience:
 
-## Time Estimates
-This assignment should take about 2 to 4 hours of your time depending on your level of experiences. 
+   - **Visual Studio Code TypeScript Extension**: Provides enhanced TypeScript support.
 
-## Need Help
-Create a github issue. We'll get back to you.
+   - **Visual Studio Code ESLint Extension**: If your project uses ESLint for linting TypeScript code, install this extension for linting support.
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/HieuVMO246/qa-assignment.git
+   cd qa-assignment
+   ```
+2. Install dependencies:
+     ```
+     npm install
+    ```
+
+### Project structure
+```
+qa-assignment/
+|-- data                          # Data test
+|-- src/
+|   |-- base/                     
+|   |   |-- BaseAPI.ts            # Common function api
+|   |   |-- CommonStep.ts         # Common function step
+|-- config/
+|   |-- setup.ts                  # Configuration test
+|   |-- PathAPI.ts                # Configuration path API
+|   |-- GlobalVariable.ts         # Configuration files
+|-- step/                         # API step file        
+|-- services/                     # Function call API
+|-- test/                         # API test files
+|-- tsconfig.json                 # TypeScript configuration
+|-- jest.config.js                # Jest configuration
+|-- package.json                  # Project dependencies and scripts
+|-- README.md                     # Project documentation
+```
+
+### How to run test
+
+```
+npm run test
+```
+
+### View report
+
+Go to the Project root directory: `./results/test-report.html`
