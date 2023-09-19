@@ -35,7 +35,7 @@ describe('Your API Tests', () => {
 
   it('TC04: Upload multiple files at the same time', async () => {
     const responseUploadImage = await imageStep.uploadMutipleImage("data\\image\\cat_image.jpg","data\\image\\images.png")
-   
+  
     imageStep.assertStatus(responseUploadImage, 400)
   });
 

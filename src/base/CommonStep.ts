@@ -27,7 +27,7 @@ export default class CommonStep {
         expect(response.body[propertyName]).toBeDefined;
     }
 
-    public async getValueProperty(response: Response, propertyName: string): Promise<string> {
+    public getValueProperty(response: Response, propertyName: string): Promise<string> {
         return response.body[propertyName];
     }
 

@@ -44,6 +44,10 @@ export class BaseAPI {
     }
   }
 
+  public async getAnImage(urlImage: string): Promise<request.Response> {
+    return await request(urlImage).get("");
+}
+
 }
 
 

@@ -1,4 +1,5 @@
 module.exports = {
+  setupFilesAfterEnv: ['./src/config/setup.ts'],
   preset: 'ts-jest',
   testEnvironment: 'node',
   testMatch: ['**/**/*.spec.ts'],
