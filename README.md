@@ -72,3 +72,7 @@ npm run test
 ### View report
 
 Go to the Project root directory: `./results/test-report.html`
+
+### Test case and sumary / Bug report 
+
+Go to the Project root directory: `./documents`
